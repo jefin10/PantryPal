@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*   # For .env.development, .env.production, etc.
+
+# Output directories
+dist/
+build/
+coverage/
+
+# PM2 logs (if you're using PM2 for process management)
+pids/
+*.pid
+*.seed
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Jest
+jest-cache/
+jest-config.js
+coverage/
+
+# MongoDB dump files
+dump/
+
+# Docker files
+docker-compose.override.yml
+
+# Optional: if you're using Prisma or other tools, include these
+prisma/migrations/
