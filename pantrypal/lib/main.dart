@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:pantrypal/auth/login.dart';
 import 'package:pantrypal/constants/theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main(){
+void main() async {
+  // This is needed to ensure plugin initialization
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Initialize shared preferences (this will help prevent the error)
+  await SharedPreferences.getInstance();
+  
   runApp(const PantryPalApp());
 }
 
@@ -13,14 +21,7 @@ class PantryPalApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pantry Pal',
       theme: appTheme,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Pantry Pal'),
-        ),
-        body: const Center(
-          child: Text('Welcome to Pantry Pal!'),
-        ),
-      ),
+      home: Login(),
     );
   }
 }
